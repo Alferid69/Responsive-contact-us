@@ -1,0 +1,151 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800;900&display=swap');
+*{
+  margin: 0;
+  padding: 0;
+  font-family: poppins, sans-serif;
+  box-sizing: border-box;
+}
+
+body{
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: beige;
+}
+
+main{
+  display: flex;
+  width: 60%;
+  height: 60%;
+  border-radius: 10px;
+  background: white;
+  box-shadow:  -5px 6px 10px #757171,
+            6px -6px 10px #757171;
+}
+
+.left-section{
+  width: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.left-section img{
+  width: 100%;
+}
+
+.right-section{
+  width: 50%;
+}
+
+.right-section h3{
+  padding: 10px 40px;
+  color: purple;
+}
+
+.right-section form{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  position: relative;
+}
+
+form .naem-input{
+  width: 80%;
+  position: relative;
+}
+
+form .naem-input input{
+  width: 100%;
+
+}
+
+form .naem-input input,
+form .text-area textarea{
+  background-color: #e6e1e1;
+  border-radius: 10px;
+  margin-bottom: 15px;
+  border: none;
+  outline: none;
+  padding: 10px 9px;
+}
+
+form .naem-input .placeholder{
+  top: 10px;
+}
+
+form .naem-input .placeholder,
+form .text-area .message-placeholder{
+  position: absolute;
+  font-size: 0.8rem;
+  opacity: 0.7;
+  pointer-events: none;
+  transition: 0.3s ease;
+  left: 10px;
+  font-weight: 500;
+}
+
+.naem-input input:focus ~ .placeholder,
+.naem-input input:valid ~ .placeholder,
+.text-area textarea:focus ~ .message-placeholder,
+.text-area textarea:valid ~ .message-placeholder{
+  top: -10px;
+  opacity: 1;
+  border-radius: 5px;
+  padding: 0 2px;
+  color: purple;
+  background-color: white;
+}
+
+.naem-input input:focus,
+.text-area textarea:focus,
+.naem-input input:valid,
+.text-area textarea:valid{
+  border: 2px solid purple;
+  background-color: white;
+}
+
+form .text-area{
+  width: 80%;
+  position: relative;
+}
+
+form .text-area textarea{
+  width: 100%;
+}
+
+form .text-area .message-placeholder{
+  top: 8px;
+}
+
+.sendbtn{
+  width: 80%;
+  padding: 10px;
+  color: white;
+  background-color: purple;
+  font-weight: 500;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  letter-spacing: 1px;
+}
+
+.sendbtn:hover{
+  background-color: rgb(153, 30, 153);
+}
+
+@media (max-width: 967px){
+  .left-section{
+    display: none;
+  }
+  .right-section{
+    width: 100%;
+  }
+
+  .right-section h3{
+    padding: 10px 55px;
+  }
+}
